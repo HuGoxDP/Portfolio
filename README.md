@@ -115,7 +115,7 @@ Other games
 
 BetGame [Link](https://github.com/HuGoxDP/BetGame.git)
 
-CodeMonkeyBuilderDefender [Link](https://github.com/HuGoxDP/CodeMonkeyBuilderDefender.git)
+CodeMonkeyBuilderDefender (In Progress) [Link](https://github.com/HuGoxDP/CodeMonkeyBuilderDefender.git)
 
 
 ## 🎯 Мої цілі
