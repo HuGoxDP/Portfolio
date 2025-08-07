@@ -111,11 +111,11 @@ Unity-розробник з річним досвідом створення і�
 </div>
 </details>
 
-Other games
+### Other games
 
-BetGame [Link](https://github.com/HuGoxDP/BetGame.git)
+- BetGame [Link](https://github.com/HuGoxDP/BetGame.git)
 
-CodeMonkeyBuilderDefender (In Progress) [Link](https://github.com/HuGoxDP/CodeMonkeyBuilderDefender.git)
+- CodeMonkeyBuilderDefender (In Progress) [Link](https://github.com/HuGoxDP/CodeMonkeyBuilderDefender.git)
 
 
 ## 🎯 Мої цілі
