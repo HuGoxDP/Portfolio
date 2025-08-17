@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Майданика Олександр — Unity Developer | Одеса</title>
-  <meta name="description" content="Unity-розробник з річним досвідом створення ігор та AR-додатків. Портфоліо проєктів, технічні навички, контакти.">
+  <title>Майданика Олександр — Unity Developer | Готовий до роботи</title>
+  <meta name="description" content="Unity Developer з Одеси. 1+ рік досвіду, 3 завершених проєкти, досвід AR розробки. Шукаю роботу Junior/Middle Unity Developer.">
+  <meta name="keywords" content="Unity Developer, Game Developer, C#, Unity Engine, AR Developer, Одеса, Ukraine, Portfolio">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Підключення компонентів CSS -->
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
@@ -15,394 +15,410 @@
   <nav class="nav">
     <div class="container">
       <ul class="nav-links">
-        <li><a href="#about">Про мене</a></li>
-        <li><a href="#skills">Навички</a></li>
+        <li><a href="#hero">Головна</a></li>
+        <li><a href="#experience">Досвід</a></li>
         <li><a href="#projects">Проєкти</a></li>
+        <li><a href="#skills">Навички</a></li>
         <li><a href="#contact">Контакти</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#certificates">Сертифікати</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="container">
-    <!-- Header -->
-    <header>
-      <div class="avatar">ОМ</div>
-      <div class="title">
-        <h1>Unity Developer | Майданика Олександр</h1>
-        <div class="badges">
-          <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
-          <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
-          <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-          <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <div class="cta">
-          <a href="https://github.com/HuGoxDP" target="_blank">🔗 GitHub</a>
-        </div>
-        <div class="location">📍 Одеса • Remote • 21 рік</div>
-      </div>
-    </header>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="status-badge">🟢 Готовий до роботи</div>
+          <h1>Майданика Олександр</h1>
+          <div class="hero-title">Unity Developer</div>
+          <p class="hero-description">
+            Unity-розробник з 1+ роком досвіду. Створюю ігри та AR-додатки, 
+            впроваджую архітектурні рішення. Готовий приєднатися до команди та розвивати 
+            крутий продукт.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Завершених проєкти</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1+</div>
+              <div class="stat-label">Рік досвіду</div>
+            </div>
+          </div>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>👋 Про мене</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>Unity-розробник з річним досвідом створення ігор та інтерактивних додатків. Маю досвід розробки казуальних ігор та AR-застосунків для освітніх цілей.</p>
-          <p>Закінчив <strong>Херсонський Державний Університет</strong> на факультеті комп'ютерних наук, фізики та математики за спеціальністю "Інженерія програмного забезпечення" (2021-2025).</p>
-          <p><strong>Моя мета:</strong> розвиватися у геймдеві як Unity-розробник, працювати в команді над комерційними проєктами середньої та великої складності, прокачувати софт-скіли, архітектуру, оптимізацію та багатокористувацькі механіки.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">📧 Зв'язатися</a>
+            <a href="https://github.com/HuGoxDP" target="_blank" class="btn-secondary">💻 GitHub</a>
+            <button onclick="printResume()" class="btn-secondary">📄 Завантажити CV</button>
+          </div>
         </div>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-label">Вік</div>
-            <div class="stat-value">21 рік</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Досвід роботи</div>
-            <div class="stat-value">1+ рік</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Освіта</div>
-            <div class="stat-value">Бакалавр ХДУ</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Англійська</div>
-            <div class="stat-value">Середній рівень</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Зайнятість</div>
-            <div class="stat-value">Повна/Неповна</div>
+        
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="avatar">HG</div>
+            <div class="badges">
+              <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
+              <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
+            </div>
+            <div class="location">📍 Одеса, Україна</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <h2>🛠️ Технічний стек</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Основні технології</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-name">C#</div>
-              <div class="skill-desc">Основна мова програмування</div>
-            </li>
-            <li>
-              <div class="skill-name">Unity Engine (2D/3D)</div>
-              <div class="skill-desc">Розробка ігор та AR-додатків</div>
-            </li>
-            <li>
-              <div class="skill-name">UniTask</div>
-              <div class="skill-desc">Асинхронне програмування</div>
-            </li>
-            <li>
-              <div class="skill-name">Vuforia</div>
-              <div class="skill-desc">AR технологія</div>
-            </li>
-          </ul>
+    <!-- Experience Summary -->
+    <section id="experience" class="section">
+      <h2>💼 Професійний досвід</h2>
+      
+      <div class="experience-highlight">
+        <div class="experience-main">
+          <div class="role">Solo Unity Developer</div>
+          <div class="period">2024 - теперішній час • 1+ рік</div>
+          <div class="company">Самостійна розробка проєктів</div>
+          
+          <div class="achievement-list">
+            <div class="achievement">
+              <span class="achievement-icon">🏆</span>
+              <div>
+                <strong>AR Physics Simulator</strong> — розробив повноцінний AR-додаток для освіти з 5 інтерактивними симуляціями
+              </div>
+            </div>
+            <div class="achievement">
+              <span class="achievement-icon">🎮</span>
+              <div>
+                <strong>Meme Quiz Game</strong> — створив квіз-гру з кастомним системою завантаження контенту та локалізацією
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="skill-category">
-          <h3>Архітектура і патерни</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-name">MVC, Factory, Object Pool</div>
-              <div class="skill-desc">Структурні патерни</div>
-            </li>
-            <li>
-              <div class="skill-name">Singleton, Service Locator</div>
-              <div class="skill-desc">Креаційні патерни</div>
-            </li>
-            <li>
-              <div class="skill-name">Command Pattern</div>
-              <div class="skill-desc">Поведінкові патерни</div>
-            </li>
-            <li>
-              <div class="skill-name">SOLID, DRY, KISS, YAGNI</div>
-              <div class="skill-desc">Принципи програмування</div>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Фреймворки і бібліотеки</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-name">Zenject (Extenject)</div>
-              <div class="skill-desc">Dependency Injection</div>
-            </li>
-            <li>
-              <div class="skill-name">DoTween</div>
-              <div class="skill-desc">Анімація та твінінг</div>
-            </li>
-            <li>
-              <div class="skill-name">R3 (Reactive Programming)</div>
-              <div class="skill-desc">Реактивне програмування</div>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Додаткові навички</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-name">Git, GitHub</div>
-              <div class="skill-desc">Система контролю версій</div>
-            </li>
-            <li>
-              <div class="skill-name">SQL, MySQL</div>
-              <div class="skill-desc">Базовий рівень</div>
-            </li>
-            <li>
-              <div class="skill-name">Adobe Photoshop, Blender</div>
-              <div class="skill-desc">Початкові навички</div>
-            </li>
-          </ul>
+        <div class="key-skills">
+          <h4>Ключові навички</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Unity (3D / 2D)</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Game Development</span>
+            <span class="skill-tag">Game Architecture</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">OOP · SOLID</span>
+            <span class="skill-tag">AR Development</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section - ПОКРАЩЕНА ВЕРСІЯ -->
+    <!-- Featured Projects -->
     <section id="projects" class="section">
-      <h2>🚀 Проєкти</h2>
-      <div class="grid">
-
-        <!-- FlappyBird -->
-        <article class="card">
-          <img class="cover" loading="lazy" src="./Flappybird/FlappyBird_Preview.png" alt="FlappyBird - Клон популярної гри з плавною фізикою" />
-          <h3>🐦 FlappyBird</h3>
-          <div class="meta">Клон популярної гри FlappyBird з плавною фізикою, системою підрахунку очок та зручним інтерфейсом користувача.</div>
-          
-          <div class="actions">
-            <button class="btn primary" data-video="https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview">🎥 Відео</button>
-            <a class="btn" href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank">📁 Код</a>
+      <h2>🚀 Топ проєкти</h2>
+      
+      <div class="projects-featured">
+        <!-- Physics AR - Main Project -->
+        <article class="project-featured">
+          <div class="project-visual">
+            <img class="project-cover" src="./PhysicsAR/PhysicsAR_Preview.png" alt="Physics AR - AR додаток для фізики" />
+            <div class="project-badges">
+              <span class="badge-featured">⭐ Головний проєкт</span>
+              <span class="badge-tech">AR</span>
+            </div>
           </div>
           
-          <!-- Галерея буде створена автоматично JavaScript -->
-          <div class="screens">
-            <img loading="lazy" src="./Flappybird/MainMenu.jpg" alt="Головне меню FlappyBird" />
-            <img loading="lazy" src="./Flappybird/Game.jpg" alt="Ігровий процес FlappyBird" />
-            <img loading="lazy" src="./Flappybird/Gameplay.jpg" alt="Геймплей FlappyBird" />
-            <img loading="lazy" src="./Flappybird/ScoreMenu.jpg" alt="Меню результатів FlappyBird" />
-          </div>
-        </article>
-
-        <!-- Physics AR -->
-        <article class="card">
-          <img class="cover" loading="lazy" src="./PhysicsAR/PhysicsAR_Preview.png" alt="Physics AR - AR додаток для навчання фізики" />
-          <h3>🔬 Physics AR</h3>
-          <div class="meta">AR Physics Simulation — додаток доповненої реальності для навчальних підручників з фізики. Завдяки цьому додатку можна виконувати лабораторні роботи без потреби у фізичному обладнанні.</div>
-          
-          <div class="actions">
-            <button class="btn primary" data-video="https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/preview">🎥 Відео</button>
-            <a class="btn" href="https://github.com/HuGoxDP/PhysicsAR" target="_blank">📁 Код</a>
-          </div>
-          
-          <div class="screens">
-            <img loading="lazy" src="./PhysicsAR/CameraScene.jpg" alt="Меню камери Physics AR" />
-            <img loading="lazy" src="./PhysicsAR/ScenarioSelectionMenu.jpg" alt="Меню вибору сценарію" />
-            <img loading="lazy" src="./PhysicsAR/Scenario1.jpg" alt="Сценарій 1 - Фізичний експеримент" />
-            <img loading="lazy" src="./PhysicsAR/ChangableField.jpg" alt="Змінні параметри експерименту" />
-            <img loading="lazy" src="./PhysicsAR/ScenarioGameplay1.jpg" alt="Запущений сценарій" />
-            <img loading="lazy" src="./PhysicsAR/ScenarioDescription.jpg" alt="Опис сценарію" />
-            <img loading="lazy" src="./PhysicsAR/ChangableFieldAllvariants.jpg" alt="Варіанти параметрів" />
-            <img loading="lazy" src="./PhysicsAR/FieldMenu.jpg" alt="Меню параметрів" />
-            <img loading="lazy" src="./PhysicsAR/Scenario2.jpg" alt="Сценарій 2" />
-            <img loading="lazy" src="./PhysicsAR/Scenario3.jpg" alt="Сценарій 3" />
-            <img loading="lazy" src="./PhysicsAR/Scenario4.jpg" alt="Сценарій 4" />
-            <img loading="lazy" src="./PhysicsAR/Scenario5.jpg" alt="Сценарій 5" />
+          <div class="project-content">
+            <h3>🔬 Physics AR</h3>
+            <div class="project-subtitle">AR Симулятор фізичних експериментів</div>
+            
+            <p class="project-description">
+              Інноваційний AR-додаток для навчання фізики. Студенти можуть виконувати лабораторні роботи 
+              без фізичного обладнання, використовуючи лише смартфон та підручник.
+            </p>
+            
+            <div class="project-impact">
+              <div class="impact-item">
+                <span class="impact-number">5</span>
+                <span class="impact-label">AR симуляцій</span>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-item">Unity</span>
+              <span class="tech-item">Vuforia</span>
+              <span class="tech-item">C#</span>
+              <span class="tech-item">R3 (Reactive)</span>
+              <span class="tech-item">Zenject (DI)</span>
+            </div>
+            
+            <div class="project-actions">
+              <button class="btn-primary" data-video="https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/preview">🎥 Демо</button>
+              <a href="https://github.com/HuGoxDP/PhysicsAR" target="_blank" class="btn-secondary">💻 Код</a>
+            </div>
           </div>
         </article>
 
-        <!-- Memzy -->
-        <article class="card">
-          <img class="cover" loading="lazy" src="./Memzy/MemeQuize_Preview.png" alt="Meme Quiz - Інтерактивна квіз-гра про мем-культуру" />
-          <h3>😄 Meme Quiz (Memzy)</h3>
-          <div class="meta">Інтерактивна квіз-гра, присвячена сучасній інтернет-культурі та мемам. 2 режими гри, 3 типи питань, кастомний лоадер квіз-паків.</div>
-          
-          <div class="actions">
-            <button class="btn primary" data-video="https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview">🎥 Відео</button>
-            <a class="btn" href="https://github.com/HuGoxDP/MemeQuize" target="_blank">📁 Код</a>
-          </div>
-          
-          <div class="screens">
-            <img loading="lazy" src="./Memzy/MainMenu.jpg" alt="Головне меню Meme Quiz" />
-            <img loading="lazy" src="./Memzy/Gameplay.jpg" alt="Ігровий процес Meme Quiz" />
-            <img loading="lazy" src="./Memzy/GameModeSelectMenu.jpg" alt="Меню вибору режиму гри" />
-            <img loading="lazy" src="./Memzy/FirstType.jpg" alt="Перший тип питань - текстові" />
-            <img loading="lazy" src="./Memzy/SecondType.jpg" alt="Другий тип питань - зображення" />
-            <img loading="lazy" src="./Memzy/ThirdType.jpg" alt="Третій тип питань - звукові" />
-            <img loading="lazy" src="./Memzy/LoadingMenu.jpg" alt="Меню завантаження" />
-            <img loading="lazy" src="./Memzy/GameplayRightAnswer.jpg" alt="Правильна відповідь" />
-            <img loading="lazy" src="./Memzy/QuizPackLoader.jpg" alt="Завантажувач квіз-паків" />
-            <img loading="lazy" src="./Memzy/ResultMenu.jpg" alt="Меню результатів" />
-            <img loading="lazy" src="./Memzy/ResultMenu2.jpg" alt="Додаткове меню результатів" />
-            <img loading="lazy" src="./Memzy/Settings.jpg" alt="Налаштування гри" />
-          </div>
-        </article>
+        <!-- Other Projects Grid -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="./Memzy/MemeQuize_Preview.png" alt="Meme Quiz" class="project-image"/>
+            <div class="project-info">
+              <h4>😄 Meme Quiz</h4>
+              <p>Квіз-гра з кастомним лоадером контенту</p>
+              <div class="project-highlights">
+                <span>3 типи питань</span>
+                <span>JSON система</span>
+                <span>Локалізація</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">DoTween</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-sm" data-video="https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview">Демо</button>
+                <a href="https://github.com/HuGoxDP/MemeQuize" target="_blank" class="btn-sm">Код</a>
+              </div>
+            </div>
+          </article>
 
+          <article class="project-card">
+            <img src="./Flappybird/FlappyBird_Preview.png" alt="FlappyBird" class="project-image"/>
+            <div class="project-info">
+              <h4>🐦 FlappyBird</h4>
+              <div class="project-links">
+                <button class="btn-sm" data-video="https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview">Демо</button>
+                <a href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank" class="btn-sm">Код</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <!-- Additional Projects -->
-      <div style="margin-top:40px;text-align:center">
-        <h3>🎯 Інші проєкти</h3>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px">
-          <a href="https://github.com/HuGoxDP/BetGame" target="_blank" class="btn">🎰 BetGame</a>
-          <a href="https://github.com/HuGoxDP/CodeMonkeyBuilderDefender" target="_blank" class="btn">🏗️ Builder Defender <span style="color:var(--muted)">(В розробці)</span></a>
+    <!-- Technical Skills -->
+    <section id="skills" class="section">
+      <h2>🛠️ Технічні навички</h2>
+      
+      <div class="skills-overview">
+        <div class="skills-primary">
+          <h3>Основний стек</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>Unity Engine</span>
+                <span>Досвідчений</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>C# Programming</span>
+                <span>Досвідчений</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>Game Architecture</span>
+                <span>Середній</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-secondary">
+          <h3>Додаткові технології</h3>
+          <div class="tech-grid">
+            <div class="tech-category">
+              <h4>Frameworks & Libraries</h4>
+              <div class="tech-list">
+                <span>Zenject (DI)</span>
+                <span>DoTween</span>
+                <span>UniTask</span>
+                <span>R3 (Reactive)</span>
+                <span>Vuforia</span>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h4>Tools & Workflow</h4>
+              <div class="tech-list">
+                <span>Git/GitHub</span>
+                <span>JSON</span>
+                <span>SQL (базовий)</span>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h4>Patterns & Principles</h4>
+              <div class="tech-list">
+                <span>MVC</span>
+                <span>Factory</span>
+                <span>Singleton</span>
+                <span>Command</span>
+                <span>SOLID</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-      <h2>📫 Контакти</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <button class="copy-btn" onclick="copyToClipboard('sasha.maidanika@gmail.com')">📋</button>
-          <div class="contact-icon">✉️</div>
-          <div class="contact-title">Email</div>
-          <div class="contact-value">
-            <a href="mailto:sasha.maidanika@gmail.com">sasha.maidanika@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <button class="copy-btn" onclick="copyToClipboard('+380959427254')">📋</button>
-          <div class="contact-icon">📱</div>
-          <div class="contact-title">Телефон</div>
-          <div class="contact-value">
-            <a href="tel:+380959427254">+38 095 942-72-54</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💬</div>
-          <div class="contact-title">Telegram</div>
-          <div class="contact-value"><a href="https://t.me/SpecWarrHuGo" target="_blank">@SpecWarrHuGo</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-title">LinkedIn</div>
-          <div class="contact-value"><a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank">Oleksandr Maidanika</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💻</div>
-          <div class="contact-title">GitHub</div>
-          <div class="contact-value"><a href="https://github.com/HuGoxDP" target="_blank">HuGoxDP</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-title">Локація</div>
-          <div class="contact-value">Одеса, Україна</div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🌐</div>
-          <div class="contact-title">Англійська</div>
-          <div class="contact-value">Середній рівень</div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-title">Зайнятість</div>
-          <div class="contact-value">Повна, неповна</div>
-        </div>
-      </div>
+      <h2>📬 Готовий обговорити співпрацю</h2>
       
-      <div style="text-align:center;margin-top:32px;padding:20px;background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(51,65,85,0.1));border:1px solid var(--border);border-radius:12px">
-        <h4 style="margin:0 0 8px;color:var(--accent)">💡 Бажані способи зв'язку</h4>
-        <p style="margin:0;color:var(--muted)">Надаю перевагу зв'язку через <strong>телефон</strong>, <strong>email</strong>, <strong>Telegram</strong> та пропозиції на Work.ua</p>
-      </div>
-    </section>
-
-    <!-- CV Section -->
-    <section id="cv" class="section">
-      <h2>📄 Резюме</h2>
-      
-      <div class="cv-section">
-        <h3>👨‍💻 Досвід роботи</h3>
-        <div class="experience-item">
-          <div class="role">Solo Unity Developer</div>
-          <div class="period">2024 - теперішній час</div>
-          <p>Протягом останнього року займаюсь розробкою ігор в Unity. Працював над кількома pet-проєктами — серед них казуальні ігри на кшталт Flappy Bird, гра «Хрестики-нулики», квіз-гра на тематику мемів і AR-додаток для симуляції фізичних лабораторних робіт.</p>
-          <p><strong>Роль у проектах:</strong> Solo developer — повністю займався програмуванням, інтеграцією контенту та архітектурою проєктів.</p>
+      <div class="contact-cta">
+        <div class="contact-main">
+          <h3>Шукаю позицію Unity Developer</h3>
+          <p>Готовий приєднатися до команди та створювати крутий продукт. Відкритий до віддаленої роботи.</p>
           
-          <h4>🎯 Основні досягнення:</h4>
-          <ul>
-            <li><strong>Квіз-гра на тему мемів (Unity/C#)</strong>
-              <ul>
-                <li>2 режими гри: виживання та обмежена кількість питань</li>
-                <li>3 типи питань: текстові, зображення, звукові</li>
-                <li>Таймер, система життів, нарахування балів</li>
-                <li>Підтримка кількох мов інтерфейсу</li>
-                <li>Кастомний лоадер квіз-паків (JSON-пакети, що можна підключати/вимикати)</li>
-              </ul>
-            </li>
-            <li><strong>AR Physics Simulation App (Unity/C# + Vuforia)</strong>
-              <ul>
-                <li>AR-додаток для симуляції лабораторних робіт із фізики</li>
-                <li>2 типи сценаріїв: анімаційні та інтерактивні практичні</li>
-                <li>Зміна параметрів симуляції через UI</li>
-                <li>Опис кожного досліду та можливість перегляду результату</li>
-                <li>5 повноцінних симуляцій на тему «Сила тертя»</li>
-              </ul>
-            </li>
-          </ul>
+          <div class="availability">
+            <div class="avail-item">
+              <span class="avail-icon">🎯</span>
+              <div>
+                <strong>Позиція:</strong> Junior/Middle Unity Developer
+              </div>
+            </div>
+            <div class="avail-item">
+              <span class="avail-icon">📍</span>
+              <div>
+                <strong>Локація:</strong> Одеса
+              </div>
+            </div>
+            <div class="avail-item">
+              <span class="avail-icon">⏰</span>
+              <div>
+                <strong>Готовий розпочати:</strong> Негайно
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-methods">
+          <h4>Як зв'язатися</h4>
+          <div class="contact-list">
+            <a href="mailto:sasha.maidanika@gmail.com" class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">sasha.maidanika@gmail.com</div>
+              </div>
+              <button class="copy-btn" onclick="copyToClipboard('sasha.maidanika@gmail.com')">📋</button>
+            </a>
+            
+            <a href="tel:+380959427254" class="contact-item">
+              <span class="contact-icon">📱</span>
+              <div>
+                <div class="contact-label">Телефон</div>
+                <div class="contact-value">+38 095 942-72-54</div>
+              </div>
+              <button class="copy-btn" onclick="copyToClipboard('+380959427254')">📋</button>
+            </a>
+            
+            <a href="https://t.me/SpecWarrHuGo" target="_blank" class="contact-item">
+              <span class="contact-icon">💬</span>
+              <div>
+                <div class="contact-label">Telegram</div>
+                <div class="contact-value">@SpecWarrHuGo</div>
+              </div>
+            </a>
+            
+            <a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank" class="contact-item">
+              <span class="contact-icon">💼</span>
+              <div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">Oleksandr Maidanika</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="cv-section">
-        <h3>🎓 Освіта</h3>
-        <div class="company">Херсонський Державний Університет</div>
-        <div class="role">Факультет комп'ютерних наук, фізики та математики</div>
-        <div class="role">121 - Інженерія програмного забезпечення</div>
-        <div class="period">2021 - 2025 (4 роки) • Бакалавр</div>
-        <p>Успішно закінчив бакалаврат зі спеціалізацією на розробці програмного забезпечення з фокусом на сучасні технології та методології розробки.</p>
-      </div>
-
-      <div class="cv-section">
-        <h3>🎯 Цілі та прагнення</h3>
-        <ul>
-          <li>Розвиватися у геймдеві як Unity-розробник</li>
-          <li>Працювати в команді над комерційними проєктами середньої та великої складності</li>
-          <li>Прокачувати софт-скіли, архітектурні рішення та оптимізацію</li>
-          <li>Розвивати навички в розробці багатокористувацьких механік</li>
-        </ul>
-      </div>
-
-      <div class="cv-actions">
-        <a href="#" class="cv-btn" onclick="printResume(); return false;">
-          🖨️ Друк резюме
-        </a>
-        <a href="https://github.com/HuGoxDP" target="_blank" class="cv-btn">
-          👀 Переглянути на GitHub
-        </a>
-        <a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank" class="cv-btn">
-          🔗 LinkedIn профіль
-        </a>
+      
+      <div class="contact-footer">
+        <p>💡 <strong>Кращі способи зв'язку:</strong> Email, Telegram, дзвінок. Відповідаю швидко!</p>
       </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="section">
-      <h2>📜 Сертифікати</h2>
+    <!-- Education & Additional Info -->
+    <section id="education" class="section">
+      <h2>🎓 Освіта та кваліфікація</h2>
       
-      <div class="cert-note">
-        <h3>🏆 Сертифікати</h3>
-        <p style="margin-bottom:20px">Постійно навчаюся та розвиваю свої навички. Усі отримані сертифікати зберігаю в окремому репозиторії для легкого доступу та верифікації.</p>
-        <a href="https://github.com/HuGoxDP/certificates" target="_blank" class="cv-btn">
-          📜 Переглянути сертифікати
-        </a>
+      <div class="education-grid">
+        <div class="education-main">
+          <div class="education-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-content">
+              <h3>Херсонський Державний Університет</h3>
+              <div class="edu-details">
+                <div class="edu-degree">Бакалавр • Інженерія програмного забезпечення</div>
+                <div class="edu-period">2021-2025</div>
+                <div class="edu-faculty">Факультет комп'ютерних наук, фізики та математики</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="education-item">
+            <div class="edu-icon">📜</div>
+            <div class="edu-content">
+              <h3>Сертифікати та курси</h3>
+              <p>Постійно навчаюся та розвиваю навички. Всі сертифікати зберігаю в окремому репозиторії.</p>
+              <a href="https://github.com/HuGoxDP/certificates" target="_blank" class="btn-secondary">Переглянути сертифікати</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="additional-info">
+          <h3>Додаткова інформація</h3>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Вік:</span>
+              <span class="info-value">21 рік</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Англійська:</span>
+              <span class="info-value">Pre-Intermediate (покращую)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Формат роботи:</span>
+              <span class="info-value">Офіс, віддалено, гібрид</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Зайнятість:</span>
+              <span class="info-value">Повна, неповна</span>
+            </div>
+          </div>
+          
+          <div class="goals">
+            <h4>Мої цілі</h4>
+            <ul>
+              <li>Розвиватися як Unity Developer в команді</li>
+              <li>Працювати над комерційними проєктами</li>
+              <li>Покращувати архітектурні навички</li>
+              <li>Вивчати нові технології геймдеву</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>Створено з ❤️ для демонстрації навичок Unity-розробки</p>
-      <p>Контакти: <a href="mailto:sasha.maidanika@gmail.com">sasha.maidanika@gmail.com</a> | <a href="tel:+380959427254">+38 095 942-72-54</a> | <a href="https://t.me/SpecWarrHuGo" target="_blank">@SpecWarrHuGo</a></p>
+      <div class="footer-content">
+        <p>🚀 Готовий створювати круті ігри разом!</p>
+        <div class="footer-links">
+          <a href="mailto:sasha.maidanika@gmail.com">📧 Email</a>
+          <a href="https://github.com/HuGoxDP" target="_blank">💻 GitHub</a>
+          <a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank">💼 LinkedIn</a>
+        </div>
+      </div>
     </footer>
   </div>
 
-  <!-- Modal for video playback -->
+  <!-- Video Modal -->
   <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-header">
@@ -417,7 +433,6 @@
     </div>
   </div>
 
-  <!-- Підключення компонентів JavaScript -->
   <script src="./js/main.js"></script>
   <script src="./js/lightbox.js"></script>
 </body>
