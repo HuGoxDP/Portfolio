@@ -47,6 +47,31 @@ class ProjectLightbox {
 
   init() {
     this.bindEvents();
+    // Визначаємо глобальні функції одразу
+    this.defineGlobalFunctions();
+  }
+
+  defineGlobalFunctions() {
+    // Глобальні функції для HTML onclick handlers
+    window.openLightbox = (projectName, index) => {
+      this.open(projectName, index);
+    };
+
+    window.closeLightbox = () => {
+      this.close();
+    };
+
+    window.prevImage = () => {
+      this.prev();
+    };
+
+    window.nextImage = () => {
+      this.next();
+    };
+
+    window.showAllImages = (projectName) => {
+      this.open(projectName, 0);
+    };
   }
 
   bindEvents() {
@@ -123,6 +148,17 @@ class VideoModal {
 
   init() {
     this.bindEvents();
+    this.defineGlobalFunctions();
+  }
+
+  defineGlobalFunctions() {
+    window.openVideoModal = (videoUrl) => {
+      this.open(videoUrl);
+    };
+
+    window.closeVideoModal = () => {
+      this.close();
+    };
   }
 
   bindEvents() {
@@ -166,52 +202,6 @@ class VideoModal {
   }
 }
 
-// Initialize lightbox and video modal
-document.addEventListener('DOMContentLoaded', () => {
-  window.projectLightbox = new ProjectLightbox();
-  window.videoModal = new VideoModal();
-});
-
-// Global functions for HTML onclick handlers
-window.openLightbox = (projectName, index) => {
-  if (window.projectLightbox) {
-    window.projectLightbox.open(projectName, index);
-  }
-};
-
-window.closeLightbox = () => {
-  if (window.projectLightbox) {
-    window.projectLightbox.close();
-  }
-};
-
-window.prevImage = () => {
-  if (window.projectLightbox) {
-    window.projectLightbox.prev();
-  }
-};
-
-window.nextImage = () => {
-  if (window.projectLightbox) {
-    window.projectLightbox.next();
-  }
-};
-
-window.openVideoModal = (videoUrl) => {
-  if (window.videoModal) {
-    window.videoModal.open(videoUrl);
-  }
-};
-
-window.closeVideoModal = () => {
-  if (window.videoModal) {
-    window.videoModal.close();
-  }
-};
-
-window.showAllImages = (projectName) => {
-  if (window.projectLightbox) {
-    window.projectLightbox.open(projectName, 0);
-  }
-};
-
+// Initialize lightbox and video modal одразу при завантаженні скрипта
+window.projectLightbox = new ProjectLightbox();
+window.videoModal = new VideoModal();
