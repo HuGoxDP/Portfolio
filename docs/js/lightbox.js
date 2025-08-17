@@ -3,40 +3,59 @@ class ProjectLightbox {
   constructor() {
     this.currentImages = [];
     this.currentIndex = 0;
+    this.projectImages = {
+      'physics-ar': [
+        { src: './PhysicsAR/PhysicsAR_Preview.png', alt: 'Physics AR - Превью' },
+        { src: './PhysicsAR/CameraScene.jpg', alt: 'Камера сцена' },
+        { src: './PhysicsAR/FieldMenu.jpg', alt: 'Меню полів' },
+        { src: './PhysicsAR/ScenarioSelectionMenu.jpg', alt: 'Меню сценаріїв' },
+        { src: './PhysicsAR/Scenario1.jpg', alt: 'Сценарій 1' },
+        { src: './PhysicsAR/Scenario2.jpg', alt: 'Сценарій 2' },
+        { src: './PhysicsAR/Scenario3.jpg', alt: 'Сценарій 3' },
+        { src: './PhysicsAR/Scenario4.jpg', alt: 'Сценарій 4' },
+        { src: './PhysicsAR/Scenario5.jpg', alt: 'Сценарій 5' },
+        { src: './PhysicsAR/ChangableField.jpg', alt: 'Змінне поле' },
+        { src: './PhysicsAR/ChangableFieldAllvariants.jpg', alt: 'Всі варіанти поля' },
+        { src: './PhysicsAR/ScenarioDescription.jpg', alt: 'Опис сценарію' },
+        { src: './PhysicsAR/ScenarioGameplay1.jpg', alt: 'Геймплей сценарію' }
+      ],
+      'meme-quiz': [
+        { src: './Memzy/MemeQuize_Preview.png', alt: 'Meme Quiz - Превью' },
+        { src: './Memzy/MainMenu.jpg', alt: 'Головне меню' },
+        { src: './Memzy/Gameplay.jpg', alt: 'Геймплей' },
+        { src: './Memzy/Settings.jpg', alt: 'Налаштування' },
+        { src: './Memzy/FirstType.jpg', alt: 'Перший тип питання' },
+        { src: './Memzy/SecondType.jpg', alt: 'Другий тип питання' },
+        { src: './Memzy/ThirdType.jpg', alt: 'Третій тип питання' },
+        { src: './Memzy/GameModeSelectMenu.jpg', alt: 'Меню режимів гри' },
+        { src: './Memzy/GameplayRightAnswer.jpg', alt: 'Правильна відповідь' },
+        { src: './Memzy/LoadingMenu.jpg', alt: 'Меню завантаження' },
+        { src: './Memzy/QuizPackLoader.jpg', alt: 'Завантажувач квіз-паків' },
+        { src: './Memzy/ResultMenu.jpg', alt: 'Меню результатів' },
+        { src: './Memzy/ResultMenu2.jpg', alt: 'Меню результатів 2' }
+      ],
+      'flappy-bird': [
+        { src: './Flappybird/FlappyBird_Preview.png', alt: 'FlappyBird - Превью' },
+        { src: './Flappybird/MainMenu.jpg', alt: 'Головне меню' },
+        { src: './Flappybird/Game.jpg', alt: 'Гра' },
+        { src: './Flappybird/Gameplay.jpg', alt: 'Геймплей' },
+        { src: './Flappybird/ScoreMenu.jpg', alt: 'Меню результатів' }
+      ]
+    };
     this.init();
   }
 
   init() {
-    this.createLightboxHTML();
     this.bindEvents();
   }
 
-  createLightboxHTML() {
-    const lightboxHTML = `
-      <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-          <button class="lightbox-close" aria-label="Close">✕</button>
-          <button class="lightbox-nav lightbox-prev" aria-label="Previous">‹</button>
-          <img class="lightbox-image" src="" alt="">
-          <button class="lightbox-nav lightbox-next" aria-label="Next">›</button>
-          <div class="lightbox-info"></div>
-        </div>
-      </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
-  }
-
   bindEvents() {
-    // Close lightbox
-    document.getElementById('lightbox').addEventListener('click', (e) => {
-      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+    // Close lightbox on click outside or close button
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
         this.close();
       }
     });
-
-    // Navigation
-    document.querySelector('.lightbox-prev').addEventListener('click', () => this.prev());
-    document.querySelector('.lightbox-next').addEventListener('click', () => this.next());
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -50,12 +69,14 @@ class ProjectLightbox {
     });
   }
 
-  open(images, startIndex = 0) {
-    this.currentImages = images;
+  open(projectName, startIndex = 0) {
+    this.currentImages = this.projectImages[projectName] || [];
     this.currentIndex = startIndex;
-    this.updateImage();
-    document.getElementById('lightbox').classList.add('show');
-    document.body.style.overflow = 'hidden';
+    if (this.currentImages.length > 0) {
+      this.updateImage();
+      document.getElementById('lightbox').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   close() {
@@ -75,122 +96,122 @@ class ProjectLightbox {
 
   updateImage() {
     const img = document.querySelector('.lightbox-image');
-    const info = document.querySelector('.lightbox-info');
+    const counter = document.querySelector('.image-counter');
+    const title = document.querySelector('.image-title');
     const current = this.currentImages[this.currentIndex];
     
-    img.src = current.src;
-    img.alt = current.alt;
-    info.textContent = `${this.currentIndex + 1} / ${this.currentImages.length} - ${current.alt}`;
+    if (img && current) {
+      img.src = current.src;
+      img.alt = current.alt;
+    }
+    
+    if (counter) {
+      counter.textContent = `${this.currentIndex + 1} / ${this.currentImages.length}`;
+    }
+    
+    if (title) {
+      title.textContent = current.alt;
+    }
   }
 }
 
-// Project Gallery Manager
-class ProjectGallery {
+// Video Modal functionality
+class VideoModal {
   constructor() {
-    this.lightbox = new ProjectLightbox();
     this.init();
   }
 
   init() {
-    this.setupProjectGalleries();
+    this.bindEvents();
   }
 
-  setupProjectGalleries() {
-    const projects = document.querySelectorAll('.card');
-    
-    projects.forEach(project => {
-      const projectName = project.querySelector('h3').textContent.trim();
-      const images = this.getProjectImages(project);
-      
-      if (images.length > 0) {
-        this.createGallery(project, images, projectName);
+  bindEvents() {
+    // Close modal on click outside or close button
+    document.addEventListener('click', (e) => {
+      if (e.target.id === 'videoModal' || e.target.classList.contains('close')) {
+        this.close();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.getElementById('videoModal').classList.contains('show')) {
+        this.close();
       }
     });
   }
 
-  getProjectImages(project) {
-    const images = [];
-    const coverImg = project.querySelector('.cover');
-    const screenImgs = project.querySelectorAll('.screens img');
+  open(videoUrl) {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
     
-    // Add cover image
-    if (coverImg && !coverImg.src.includes('data:image/svg+xml')) {
-      images.push({
-        src: coverImg.src,
-        alt: coverImg.alt || 'Project Preview'
-      });
+    if (iframe) {
+      iframe.src = videoUrl;
     }
     
-    // Add screen images
-    screenImgs.forEach(img => {
-      if (!img.src.includes('data:image/svg+xml')) {
-        images.push({
-          src: img.src,
-          alt: img.alt || 'Screenshot'
-        });
-      }
-    });
-
-    return images;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
   }
 
-  createGallery(project, images, projectName) {
-    const screensContainer = project.querySelector('.screens');
-    if (!screensContainer) return;
-
-    // Replace screens container with new gallery
-    const galleryHTML = this.createGalleryHTML(images, projectName);
-    screensContainer.outerHTML = galleryHTML;
-
-    // Bind click events
-    const newGallery = project.querySelector('.project-gallery');
-    newGallery.querySelectorAll('.gallery-item').forEach((item, index) => {
-      item.addEventListener('click', () => {
-        this.lightbox.open(images, index);
-      });
-    });
-
-    // Handle cover image click
-    const coverImg = project.querySelector('.cover');
-    if (coverImg) {
-      coverImg.addEventListener('click', () => {
-        this.lightbox.open(images, 0);
-      });
-    }
-  }
-
-  createGalleryHTML(images, projectName) {
-    const visibleImages = images.slice(0, 4);
-    const remainingCount = images.length - 4;
-
-    let galleryHTML = '<div class="project-gallery">';
+  close() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
     
-    visibleImages.forEach((img, index) => {
-      galleryHTML += `
-        <div class="gallery-item" data-index="${index}">
-          <img src="${img.src}" alt="${img.alt}" loading="lazy">
-          <div class="gallery-overlay">
-            <span class="zoom-icon">🔍</span>
-          </div>
-        </div>
-      `;
-    });
-
-    galleryHTML += '</div>';
-
-    if (remainingCount > 0) {
-      galleryHTML += `
-        <button class="expand-btn" onclick="projectGallery.lightbox.open(${JSON.stringify(images).replace(/"/g, '&quot;')}, 4)">
-          Переглянути всі ${images.length} зображень
-        </button>
-      `;
+    if (iframe) {
+      iframe.src = '';
     }
-
-    return galleryHTML;
+    
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
   }
 }
 
-// Initialize when DOM is loaded
+// Initialize lightbox and video modal
 document.addEventListener('DOMContentLoaded', () => {
-  window.projectGallery = new ProjectGallery();
+  window.projectLightbox = new ProjectLightbox();
+  window.videoModal = new VideoModal();
 });
+
+// Global functions for HTML onclick handlers
+window.openLightbox = (projectName, index) => {
+  if (window.projectLightbox) {
+    window.projectLightbox.open(projectName, index);
+  }
+};
+
+window.closeLightbox = () => {
+  if (window.projectLightbox) {
+    window.projectLightbox.close();
+  }
+};
+
+window.prevImage = () => {
+  if (window.projectLightbox) {
+    window.projectLightbox.prev();
+  }
+};
+
+window.nextImage = () => {
+  if (window.projectLightbox) {
+    window.projectLightbox.next();
+  }
+};
+
+window.openVideoModal = (videoUrl) => {
+  if (window.videoModal) {
+    window.videoModal.open(videoUrl);
+  }
+};
+
+window.closeVideoModal = () => {
+  if (window.videoModal) {
+    window.videoModal.close();
+  }
+};
+
+window.showAllImages = (projectName) => {
+  if (window.projectLightbox) {
+    window.projectLightbox.open(projectName, 0);
+  }
+};
+

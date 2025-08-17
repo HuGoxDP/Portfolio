@@ -7,7 +7,6 @@ class PortfolioApp {
   init() {
     this.setupNavigation();
     this.setupCopyButtons();
-    this.setupVideoModals();
     this.setupScrollHighlight();
   }
 
@@ -84,66 +83,10 @@ class PortfolioApp {
     });
   }
 
-  // Video modal functionality
-  setupVideoModals() {
-    document.querySelectorAll('button[data-video]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const url = btn.getAttribute('data-video');
-        const title = btn.closest('.card').querySelector('h3').innerText || 'Відео демонстрація';
-        this.openVideoModal(url, title);
-      });
-    });
-
-    // Setup modal close events
-    const modal = document.getElementById('modal');
-    const closeBtn = document.getElementById('closeBtn');
-    
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => this.closeVideoModal());
-    }
-    
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target.id === 'modal') this.closeVideoModal();
-      });
-    }
-
-    // Close modal on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.closeVideoModal();
-    });
-  }
-
-  openVideoModal(url, title) {
-    const modal = document.getElementById('modal');
-    const player = document.getElementById('player');
-    const modalTitle = document.getElementById('modalTitle');
-    
-    if (modal && player && modalTitle) {
-      modalTitle.innerText = title;
-      player.src = url;
-      modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  closeVideoModal() {
-    const modal = document.getElementById('modal');
-    const player = document.getElementById('player');
-    
-    if (modal && player) {
-      player.src = '';
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  }
-
   // Active navigation highlighting
   setupScrollHighlight() {
     window.addEventListener('scroll', () => {
-      const sections = ['about', 'skills', 'projects', 'contact', 'cv', 'certificates'];
+      const sections = ['hero', 'experience', 'projects', 'skills', 'contact', 'education'];
       const navHeight = document.querySelector('.nav').offsetHeight;
       
       sections.forEach(sectionId => {

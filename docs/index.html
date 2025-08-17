@@ -118,10 +118,16 @@
         <!-- Physics AR - Main Project -->
         <article class="project-featured">
           <div class="project-visual">
-            <img class="project-cover" src="./PhysicsAR/PhysicsAR_Preview.png" alt="Physics AR - AR додаток для фізики" />
+            <img class="project-cover" src="./PhysicsAR/PhysicsAR_Preview.png" alt="Physics AR - AR додаток для фізики" onclick="openLightbox('physics-ar', 0)" />
             <div class="project-badges">
               <span class="badge-featured">⭐ Головний проєкт</span>
               <span class="badge-tech">AR</span>
+            </div>
+            <div class="project-gallery-small" id="physics-ar-gallery">
+              <img src="./PhysicsAR/CameraScene.jpg" alt="Камера сцена" onclick="openLightbox('physics-ar', 1)">
+              <img src="./PhysicsAR/FieldMenu.jpg" alt="Меню полів" onclick="openLightbox('physics-ar', 2)">
+              <img src="./PhysicsAR/ScenarioSelectionMenu.jpg" alt="Меню сценаріїв" onclick="openLightbox('physics-ar', 3)">
+              <span class="more-indicator" onclick="showAllImages('physics-ar')">+9</span>
             </div>
           </div>
           
@@ -150,7 +156,7 @@
             </div>
             
             <div class="project-actions">
-              <button class="btn-primary" data-video="https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/preview">🎥 Демо</button>
+              <button class="btn-primary" onclick="openVideoModal('https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/view')">🎥 Відео</button>
               <a href="https://github.com/HuGoxDP/PhysicsAR" target="_blank" class="btn-secondary">💻 Код</a>
             </div>
           </div>
@@ -159,7 +165,13 @@
         <!-- Other Projects Grid -->
         <div class="projects-grid">
           <article class="project-card">
-            <img src="./Memzy/MemeQuize_Preview.png" alt="Meme Quiz" class="project-image"/>
+            <img src="./Memzy/MemeQuize_Preview.png" alt="Meme Quiz" class="project-image" onclick="openLightbox('meme-quiz', 0)"/>
+            <div class="project-gallery-small" id="meme-quiz-gallery">
+              <img src="./Memzy/MainMenu.jpg" alt="Головне меню" onclick="openLightbox('meme-quiz', 1)">
+              <img src="./Memzy/Gameplay.jpg" alt="Геймплей" onclick="openLightbox('meme-quiz', 2)">
+              <img src="./Memzy/Settings.jpg" alt="Налаштування" onclick="openLightbox('meme-quiz', 3)">
+              <span class="more-indicator" onclick="showAllImages('meme-quiz')">+10</span>
+            </div>
             <div class="project-info">
               <h4>😄 Meme Quiz</h4>
               <p>Квіз-гра з кастомним лоадером контенту</p>
@@ -174,19 +186,79 @@
                 <span class="tech-item">DoTween</span>
               </div>
               <div class="project-links">
-                <button class="btn-sm" data-video="https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview">Демо</button>
-                <a href="https://github.com/HuGoxDP/MemeQuize" target="_blank" class="btn-sm">Код</a>
+                <button class="btn-sm" onclick="openVideoModal('https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview')">🎥 Відео</button>
+                <a href="https://github.com/HuGoxDP/MemeQuize" target="_blank" class="btn-sm">💻 Код</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <img src="./Flappybird/FlappyBird_Preview.png" alt="FlappyBird" class="project-image"/>
+            <img src="./Flappybird/FlappyBird_Preview.png" alt="FlappyBird" class="project-image" onclick="openLightbox('flappy-bird', 0)"/>
+            <div class="project-gallery-small" id="flappy-bird-gallery">
+              <img src="./Flappybird/MainMenu.jpg" alt="Головне меню" onclick="openLightbox('flappy-bird', 1)">
+              <img src="./Flappybird/Game.jpg" alt="Гра" onclick="openLightbox('flappy-bird', 2)">
+              <img src="./Flappybird/Gameplay.jpg" alt="Геймплей" onclick="openLightbox('flappy-bird', 3)">
+              <span class="more-indicator" onclick="showAllImages('flappy-bird')">+2</span>
+            </div>
             <div class="project-info">
               <h4>🐦 FlappyBird</h4>
+              <p>Клон популярної гри з плавною фізикою</p>
+              <div class="project-highlights">
+                <span>Physics2D</span>
+                <span>UI System</span>
+                <span>Score System</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">Physics2D</span>
+              </div>
               <div class="project-links">
-                <button class="btn-sm" data-video="https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview">Демо</button>
-                <a href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank" class="btn-sm">Код</a>
+                <button class="btn-sm" onclick="openVideoModal('https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview')">🎥 Відео</button>
+                <a href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank" class="btn-sm">💻 Код</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-placeholder">🎯</div>
+            <div class="project-info">
+              <h4>🎯 BetGame</h4>
+              <p>Казуальна гра-шутер з захистом воріт</p>
+              <div class="project-highlights">
+                <span>Shooting Mechanics</span>
+                <span>Wave System</span>
+                <span>Upgrade System</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">Game Logic</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HuGoxDP/BetGame" target="_blank" class="btn-sm">💻 Код</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-placeholder">🏗️</div>
+            <div class="project-status-badge">В РОЗРОБЦІ</div>
+            <div class="project-info">
+              <h4>🏗️ Builder Defender</h4>
+              <p>Tower Defense з елементами RTS</p>
+              <div class="project-highlights">
+                <span>Resource Management</span>
+                <span>Building System</span>
+                <span class="status-in-progress">In Progress</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">DI (Власний)</span>
+                <span class="tech-item">UniTask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HuGoxDP/CodeMonkeyBuilderDefender" target="_blank" class="btn-sm">💻 Код</a>
               </div>
             </div>
           </article>
@@ -241,7 +313,7 @@
                 <span>Zenject (DI)</span>
                 <span>DoTween</span>
                 <span>UniTask</span>
-                <span>R3 (Reactive)</span>
+                <span class="tech-item">R3 (Reactive)</span>
                 <span>Vuforia</span>
               </div>
             </div>
@@ -419,16 +491,30 @@
   </div>
 
   <!-- Video Modal -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div id="videoModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <strong id="modalTitle">Відео демонстрація</strong>
-        <button class="close" id="closeBtn" aria-label="Close">✕</button>
+        <h3>Відео демонстрація</h3>
+        <button class="close" onclick="closeVideoModal()">✕</button>
       </div>
       <div class="modal-body">
-        <div style="position:relative;padding-top:56.25%">
-          <iframe id="player" src="" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:12px" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="video-container">
+          <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="prevImage()">‹</button>
+      <img class="lightbox-image" src="" alt="">
+      <button class="lightbox-nav lightbox-next" onclick="nextImage()">›</button>
+      <div class="lightbox-info">
+        <div class="image-counter"></div>
+        <div class="image-title"></div>
       </div>
     </div>
   </div>
