@@ -1,0 +1,93 @@
+﻿/* Print Styles - Друк тільки резюме */
+@media print {
+  /* Приховуємо все крім CV секції */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Показуємо тільки CV секцію та її вміст */
+  #cv, #cv * {
+    visibility: visible;
+  }
+  
+  /* Позиціонуємо CV секцію для друку */
+  #cv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Стилі для друку CV */
+  .cv-section {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    color: black !important;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+  
+  .cv-section h3 {
+    color: #333 !important;
+    border-bottom: 2px solid #7c3aed;
+    padding-bottom: 5px;
+  }
+  
+  .cv-section h4 {
+    color: #555 !important;
+  }
+  
+  .cv-section p, .cv-section li {
+    color: #333 !important;
+    line-height: 1.5;
+  }
+  
+  .company {
+    color: #000 !important;
+    font-weight: bold;
+  }
+  
+  .role {
+    color: #7c3aed !important;
+    font-weight: 600;
+  }
+  
+  .period {
+    color: #666 !important;
+  }
+  
+  /* Приховуємо кнопки при друку */
+  .cv-actions {
+    display: none !important;
+  }
+  
+  /* Заголовок для друку */
+  #cv::before {
+    content: "Резюме - Майданика Олександр | Unity Developer";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333 !important;
+    border-bottom: 3px solid #7c3aed;
+    padding-bottom: 10px;
+  }
+  
+  /* Оптимізація для A4 */
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+  
+  /* Запобігаємо розриву сторінки всередині блоків */
+  .experience-item {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+  }
+}
+

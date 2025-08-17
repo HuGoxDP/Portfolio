@@ -3,133 +3,402 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Портфоліо Unity-розробника — Одеса</title>
+  <title>Майданика Олександр — Unity Developer | Одеса</title>
+  <meta name="description" content="Unity-розробник з річним досвідом створення ігор та AR-додатків. Портфоліо проєктів, технічні навички, контакти.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724; /* deep navy */
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#7c3aed;
-      --glass: rgba(255,255,255,0.03);
-    }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);color:#e6eef8;line-height:1.45}
-    .container{max-width:1100px;margin:28px auto;padding:24px}
-    header{display:flex;align-items:center;gap:18px}
-    .title{display:flex;flex-direction:column}
-    h1{margin:0;font-size:1.6rem}
-    .badges img{height:28px;margin-right:8px;vertical-align:middle}
-    p.lead{color:var(--muted);margin:10px 0 18px}
-
-    .hero{display:flex;gap:18px;align-items:center;justify-content:space-between}
-    .hero .about{max-width:66%}
-    .cta a{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:28px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    .card h3{margin:6px 0 8px}
-    .meta{color:var(--muted);font-size:0.9rem;margin-bottom:12px}
-    .cover{width:100%;height:180px;object-fit:cover;border-radius:8px;background:linear-gradient(90deg,#061226,#071634)}
-
-    .actions{display:flex;gap:8px;margin-top:12px}
-    .btn{flex:1;padding:8px 10px;border-radius:8px;text-align:center;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.04);cursor:pointer;color:inherit;background:transparent}
-    .btn.primary{background:var(--accent);color:white}
-    .screens{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .screens img{width:100px;height:68px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
-
-    footer{color:var(--muted);margin-top:36px;text-align:center;font-size:0.9rem}
-
-    /* modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.75);z-index:999;padding:20px}
-    .modal.show{display:flex}
-    .modal-content{width:min(1000px,96%);background:var(--card);border-radius:12px;padding:10px;box-shadow:0 20px 60px rgba(2,6,23,0.7)}
-    .modal-header{display:flex;justify-content:space-between;align-items:center;padding:6px 8px}
-    .modal-body{padding:6px}
-    .close{background:transparent;border:0;color:var(--muted);font-size:18px;cursor:pointer}
-
-    @media (max-width:720px){
-      .hero{flex-direction:column;align-items:flex-start}
-      .hero .about{max-width:100%}
-      .cover{height:160px}
-    }
-  </style>
+  <!-- Підключення компонентів CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="#about">Про мене</a></li>
+        <li><a href="#skills">Навички</a></li>
+        <li><a href="#projects">Проєкти</a></li>
+        <li><a href="#contact">Контакти</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#certificates">Сертифікати</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container">
+    <!-- Header -->
     <header>
-      <div style="width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#334155);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px">UX</div>
+      <div class="avatar">ОМ</div>
       <div class="title">
-        <h1>🎮 Портфоліо Unity-розробника | Одеса, Україна</h1>
-        <div class="badges" style="margin-top:8px">
+        <h1>Unity Developer | Майданика Олександр</h1>
+        <div class="badges">
           <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
           <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
           <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+          <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
         </div>
       </div>
-      <div style="margin-left:auto;text-align:right">
+      <div class="hero-actions">
         <div class="cta">
-          <a href="https://github.com/HuGoxDP" target="_blank">GitHub</a>
+          <a href="https://github.com/HuGoxDP" target="_blank">🔗 GitHub</a>
         </div>
-        <div style="color:var(--muted);font-size:13px;margin-top:8px">Одеса · Remote</div>
+        <div class="location">📍 Одеса • Remote • 21 рік</div>
       </div>
     </header>
 
-    <p class="lead">Unity-розробник з річним досвідом створення ігор та AR-додатків. Тут — вибірка проєктів із короткими описами, скриншотами та відео-демо.</p>
-
-    <section class="grid" id="projects">
-
-      <!-- FlappyBird -->
-      <article class="card">
-        <img class="cover" loading="lazy" src="Flappybird/FlappyBird_Preview.png" alt="FlappyBird preview" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%23071234\'/><text x=\'50%\' y=\'50%\' fill=\'%23ffffff\' font-size=\'22\' font-family=\'Arial\' text-anchor=\'middle\'>No image: FlappyBird</text></svg>'" />
-        <h3>FlappyBird</h3>
-        <div class="meta">Клон FlappyBird — плавна фізика та підрахунок очок</div>
-        <div style="display:flex;gap:10px;align-items:center">
-          <div class="actions" style="flex:1">
-            <button class="btn primary" data-video="https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview">Дивитись відео</button>
-            <a class="btn" href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank">Репозиторій</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>👋 Про мене</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Unity-розробник з річним досвідом створення ігор та інтерактивних додатків. Маю досвід розробки казуальних ігор та AR-застосунків для освітніх цілей.</p>
+          <p>Закінчив <strong>Херсонський Державний Університет</strong> на факультеті комп'ютерних наук, фізики та математики за спеціальністю "Інженерія програмного забезпечення" (2021-2025).</p>
+          <p><strong>Моя мета:</strong> розвиватися у геймдеві як Unity-розробник, працювати в команді над комерційними проєктами середньої та великої складності, прокачувати софт-скіли, архітектуру, оптимізацію та багатокористувацькі механіки.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-label">Вік</div>
+            <div class="stat-value">21 рік</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Досвід роботи</div>
+            <div class="stat-value">1+ рік</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Освіта</div>
+            <div class="stat-value">Бакалавр ХДУ</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Англійська</div>
+            <div class="stat-value">Середній рівень</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Зайнятість</div>
+            <div class="stat-value">Повна/Неповна</div>
           </div>
         </div>
-        <div class="screens" style="margin-top:12px">
-          <img loading="lazy" src="Flappybird/MainMenu.jpg" alt="MainMenu" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
-          <img loading="lazy" src="Flappybird/Game.jpg" alt="Game" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
-        </div>
-      </article>
+      </div>
+    </section>
 
-      <!-- Physics AR -->
-      <article class="card">
-        <img class="cover" loading="lazy" src="PhysicsAR/PhysicsAR_Preview.png" alt="PhysicsAR preview" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%23071234\'/><text x=\'50%\' y=\'50%\' fill=\'%23ffffff\' font-size=\'22\' font-family=\'Arial\' text-anchor=\'middle\'>No image: PhysicsAR</text></svg>'" />
-        <h3>Physics AR</h3>
-        <div class="meta">AR Physics Simulation — лабораторні в AR, інтерактивні сценарії</div>
-        <div class="actions">
-          <button class="btn primary" data-video="https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/preview">Дивитись відео</button>
-          <a class="btn" href="https://github.com/HuGoxDP/PhysicsAR" target="_blank">Репозиторій</a>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>🛠️ Технічний стек</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Основні технології</h3>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-name">C#</div>
+              <div class="skill-desc">Основна мова програмування</div>
+            </li>
+            <li>
+              <div class="skill-name">Unity Engine (2D/3D)</div>
+              <div class="skill-desc">Розробка ігор та AR-додатків</div>
+            </li>
+            <li>
+              <div class="skill-name">UniTask</div>
+              <div class="skill-desc">Асинхронне програмування</div>
+            </li>
+            <li>
+              <div class="skill-name">Vuforia</div>
+              <div class="skill-desc">AR технологія</div>
+            </li>
+          </ul>
         </div>
-        <div class="screens">
-          <img loading="lazy" src="PhysicsAR/CameraScene.jpg" alt="CameraScene" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
-          <img loading="lazy" src="PhysicsAR/ScenarioSelectionMenu.jpg" alt="ScenarioSelection" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
+        
+        <div class="skill-category">
+          <h3>Архітектура і патерни</h3>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-name">MVC, Factory, Object Pool</div>
+              <div class="skill-desc">Структурні патерни</div>
+            </li>
+            <li>
+              <div class="skill-name">Singleton, Service Locator</div>
+              <div class="skill-desc">Креаційні патерни</div>
+            </li>
+            <li>
+              <div class="skill-name">Command Pattern</div>
+              <div class="skill-desc">Поведінкові патерни</div>
+            </li>
+            <li>
+              <div class="skill-name">SOLID, DRY, KISS, YAGNI</div>
+              <div class="skill-desc">Принципи програмування</div>
+            </li>
+          </ul>
         </div>
-      </article>
+        
+        <div class="skill-category">
+          <h3>Фреймворки і бібліотеки</h3>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-name">Zenject (Extenject)</div>
+              <div class="skill-desc">Dependency Injection</div>
+            </li>
+            <li>
+              <div class="skill-name">DoTween</div>
+              <div class="skill-desc">Анімація та твінінг</div>
+            </li>
+            <li>
+              <div class="skill-name">R3 (Reactive Programming)</div>
+              <div class="skill-desc">Реактивне програмування</div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Додаткові навички</h3>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-name">Git, GitHub</div>
+              <div class="skill-desc">Система контролю версій</div>
+            </li>
+            <li>
+              <div class="skill-name">SQL, MySQL</div>
+              <div class="skill-desc">Базовий рівень</div>
+            </li>
+            <li>
+              <div class="skill-name">Adobe Photoshop, Blender</div>
+              <div class="skill-desc">Початкові навички</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Memzy -->
-      <article class="card">
-        <img class="cover" loading="lazy" src="Memzy/MemeQuize_Preview.png" alt="Memzy preview" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%23071234\'/><text x=\'50%\' y=\'50%\' fill=\'%23ffffff\' font-size=\'22\' font-family=\'Arial\' text-anchor=\'middle\'>No image: Memzy</text></svg>'" />
-        <h3>Meme Quiz (Memzy)</h3>
-        <div class="meta">Квіз-гра: кілька режимів, питання з зображеннями та звуком</div>
-        <div class="actions">
-          <button class="btn primary" data-video="https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview">Дивитись відео</button>
-          <a class="btn" href="https://github.com/HuGoxDP/MemeQuize" target="_blank">Репозиторій</a>
-        </div>
-        <div class="screens">
-          <img loading="lazy" src="Memzy/MainMenu.jpg" alt="MainMenu" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
-          <img loading="lazy" src="Memzy/Gameplay.jpg" alt="Gameplay" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'250\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23071234\\'/><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23ffffff\\' font-size=\\'18\\' font-family=\\'Arial\\' text-anchor=\\'middle\\'>No image</text></svg>'" />
-        </div>
-      </article>
+    <!-- Projects Section - ПОКРАЩЕНА ВЕРСІЯ -->
+    <section id="projects" class="section">
+      <h2>🚀 Проєкти</h2>
+      <div class="grid">
 
+        <!-- FlappyBird -->
+        <article class="card">
+          <img class="cover" loading="lazy" src="./Flappybird/FlappyBird_Preview.png" alt="FlappyBird - Клон популярної гри з плавною фізикою" />
+          <h3>🐦 FlappyBird</h3>
+          <div class="meta">Клон популярної гри FlappyBird з плавною фізикою, системою підрахунку очок та зручним інтерфейсом користувача.</div>
+          
+          <div class="actions">
+            <button class="btn primary" data-video="https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/preview">🎥 Відео</button>
+            <a class="btn" href="https://github.com/HuGoxDP/Flappy-Bird" target="_blank">📁 Код</a>
+          </div>
+          
+          <!-- Галерея буде створена автоматично JavaScript -->
+          <div class="screens">
+            <img loading="lazy" src="./Flappybird/MainMenu.jpg" alt="Головне меню FlappyBird" />
+            <img loading="lazy" src="./Flappybird/Game.jpg" alt="Ігровий процес FlappyBird" />
+            <img loading="lazy" src="./Flappybird/Gameplay.jpg" alt="Геймплей FlappyBird" />
+            <img loading="lazy" src="./Flappybird/ScoreMenu.jpg" alt="Меню результатів FlappyBird" />
+          </div>
+        </article>
+
+        <!-- Physics AR -->
+        <article class="card">
+          <img class="cover" loading="lazy" src="./PhysicsAR/PhysicsAR_Preview.png" alt="Physics AR - AR додаток для навчання фізики" />
+          <h3>🔬 Physics AR</h3>
+          <div class="meta">AR Physics Simulation — додаток доповненої реальності для навчальних підручників з фізики. Завдяки цьому додатку можна виконувати лабораторні роботи без потреби у фізичному обладнанні.</div>
+          
+          <div class="actions">
+            <button class="btn primary" data-video="https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/preview">🎥 Відео</button>
+            <a class="btn" href="https://github.com/HuGoxDP/PhysicsAR" target="_blank">📁 Код</a>
+          </div>
+          
+          <div class="screens">
+            <img loading="lazy" src="./PhysicsAR/CameraScene.jpg" alt="Меню камери Physics AR" />
+            <img loading="lazy" src="./PhysicsAR/ScenarioSelectionMenu.jpg" alt="Меню вибору сценарію" />
+            <img loading="lazy" src="./PhysicsAR/Scenario1.jpg" alt="Сценарій 1 - Фізичний експеримент" />
+            <img loading="lazy" src="./PhysicsAR/ChangableField.jpg" alt="Змінні параметри експерименту" />
+            <img loading="lazy" src="./PhysicsAR/ScenarioGameplay1.jpg" alt="Запущений сценарій" />
+            <img loading="lazy" src="./PhysicsAR/ScenarioDescription.jpg" alt="Опис сценарію" />
+            <img loading="lazy" src="./PhysicsAR/ChangableFieldAllvariants.jpg" alt="Варіанти параметрів" />
+            <img loading="lazy" src="./PhysicsAR/FieldMenu.jpg" alt="Меню параметрів" />
+            <img loading="lazy" src="./PhysicsAR/Scenario2.jpg" alt="Сценарій 2" />
+            <img loading="lazy" src="./PhysicsAR/Scenario3.jpg" alt="Сценарій 3" />
+            <img loading="lazy" src="./PhysicsAR/Scenario4.jpg" alt="Сценарій 4" />
+            <img loading="lazy" src="./PhysicsAR/Scenario5.jpg" alt="Сценарій 5" />
+          </div>
+        </article>
+
+        <!-- Memzy -->
+        <article class="card">
+          <img class="cover" loading="lazy" src="./Memzy/MemeQuize_Preview.png" alt="Meme Quiz - Інтерактивна квіз-гра про мем-культуру" />
+          <h3>😄 Meme Quiz (Memzy)</h3>
+          <div class="meta">Інтерактивна квіз-гра, присвячена сучасній інтернет-культурі та мемам. 2 режими гри, 3 типи питань, кастомний лоадер квіз-паків.</div>
+          
+          <div class="actions">
+            <button class="btn primary" data-video="https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/preview">🎥 Відео</button>
+            <a class="btn" href="https://github.com/HuGoxDP/MemeQuize" target="_blank">📁 Код</a>
+          </div>
+          
+          <div class="screens">
+            <img loading="lazy" src="./Memzy/MainMenu.jpg" alt="Головне меню Meme Quiz" />
+            <img loading="lazy" src="./Memzy/Gameplay.jpg" alt="Ігровий процес Meme Quiz" />
+            <img loading="lazy" src="./Memzy/GameModeSelectMenu.jpg" alt="Меню вибору режиму гри" />
+            <img loading="lazy" src="./Memzy/FirstType.jpg" alt="Перший тип питань - текстові" />
+            <img loading="lazy" src="./Memzy/SecondType.jpg" alt="Другий тип питань - зображення" />
+            <img loading="lazy" src="./Memzy/ThirdType.jpg" alt="Третій тип питань - звукові" />
+            <img loading="lazy" src="./Memzy/LoadingMenu.jpg" alt="Меню завантаження" />
+            <img loading="lazy" src="./Memzy/GameplayRightAnswer.jpg" alt="Правильна відповідь" />
+            <img loading="lazy" src="./Memzy/QuizPackLoader.jpg" alt="Завантажувач квіз-паків" />
+            <img loading="lazy" src="./Memzy/ResultMenu.jpg" alt="Меню результатів" />
+            <img loading="lazy" src="./Memzy/ResultMenu2.jpg" alt="Додаткове меню результатів" />
+            <img loading="lazy" src="./Memzy/Settings.jpg" alt="Налаштування гри" />
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Additional Projects -->
+      <div style="margin-top:40px;text-align:center">
+        <h3>🎯 Інші проєкти</h3>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px">
+          <a href="https://github.com/HuGoxDP/BetGame" target="_blank" class="btn">🎰 BetGame</a>
+          <a href="https://github.com/HuGoxDP/CodeMonkeyBuilderDefender" target="_blank" class="btn">🏗️ Builder Defender <span style="color:var(--muted)">(В розробці)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>📫 Контакти</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <button class="copy-btn" onclick="copyToClipboard('sasha.maidanika@gmail.com')">📋</button>
+          <div class="contact-icon">✉️</div>
+          <div class="contact-title">Email</div>
+          <div class="contact-value">
+            <a href="mailto:sasha.maidanika@gmail.com">sasha.maidanika@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <button class="copy-btn" onclick="copyToClipboard('+380959427254')">📋</button>
+          <div class="contact-icon">📱</div>
+          <div class="contact-title">Телефон</div>
+          <div class="contact-value">
+            <a href="tel:+380959427254">+38 095 942-72-54</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div class="contact-title">Telegram</div>
+          <div class="contact-value"><a href="https://t.me/SpecWarrHuGo" target="_blank">@SpecWarrHuGo</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-title">LinkedIn</div>
+          <div class="contact-value"><a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank">Oleksandr Maidanika</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💻</div>
+          <div class="contact-title">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/HuGoxDP" target="_blank">HuGoxDP</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-title">Локація</div>
+          <div class="contact-value">Одеса, Україна</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-title">Англійська</div>
+          <div class="contact-value">Середній рівень</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-title">Зайнятість</div>
+          <div class="contact-value">Повна, неповна</div>
+        </div>
+      </div>
+      
+      <div style="text-align:center;margin-top:32px;padding:20px;background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(51,65,85,0.1));border:1px solid var(--border);border-radius:12px">
+        <h4 style="margin:0 0 8px;color:var(--accent)">💡 Бажані способи зв'язку</h4>
+        <p style="margin:0;color:var(--muted)">Надаю перевагу зв'язку через <strong>телефон</strong>, <strong>email</strong>, <strong>Telegram</strong> та пропозиції на Work.ua</p>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section">
+      <h2>📄 Резюме</h2>
+      
+      <div class="cv-section">
+        <h3>👨‍💻 Досвід роботи</h3>
+        <div class="experience-item">
+          <div class="role">Solo Unity Developer</div>
+          <div class="period">2024 - теперішній час</div>
+          <p>Протягом останнього року займаюсь розробкою ігор в Unity. Працював над кількома pet-проєктами — серед них казуальні ігри на кшталт Flappy Bird, гра «Хрестики-нулики», квіз-гра на тематику мемів і AR-додаток для симуляції фізичних лабораторних робіт.</p>
+          <p><strong>Роль у проектах:</strong> Solo developer — повністю займався програмуванням, інтеграцією контенту та архітектурою проєктів.</p>
+          
+          <h4>🎯 Основні досягнення:</h4>
+          <ul>
+            <li><strong>Квіз-гра на тему мемів (Unity/C#)</strong>
+              <ul>
+                <li>2 режими гри: виживання та обмежена кількість питань</li>
+                <li>3 типи питань: текстові, зображення, звукові</li>
+                <li>Таймер, система життів, нарахування балів</li>
+                <li>Підтримка кількох мов інтерфейсу</li>
+                <li>Кастомний лоадер квіз-паків (JSON-пакети, що можна підключати/вимикати)</li>
+              </ul>
+            </li>
+            <li><strong>AR Physics Simulation App (Unity/C# + Vuforia)</strong>
+              <ul>
+                <li>AR-додаток для симуляції лабораторних робіт із фізики</li>
+                <li>2 типи сценаріїв: анімаційні та інтерактивні практичні</li>
+                <li>Зміна параметрів симуляції через UI</li>
+                <li>Опис кожного досліду та можливість перегляду результату</li>
+                <li>5 повноцінних симуляцій на тему «Сила тертя»</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h3>🎓 Освіта</h3>
+        <div class="company">Херсонський Державний Університет</div>
+        <div class="role">Факультет комп'ютерних наук, фізики та математики</div>
+        <div class="role">121 - Інженерія програмного забезпечення</div>
+        <div class="period">2021 - 2025 (4 роки) • Бакалавр</div>
+        <p>Успішно закінчив бакалаврат зі спеціалізацією на розробці програмного забезпечення з фокусом на сучасні технології та методології розробки.</p>
+      </div>
+
+      <div class="cv-section">
+        <h3>🎯 Цілі та прагнення</h3>
+        <ul>
+          <li>Розвиватися у геймдеві як Unity-розробник</li>
+          <li>Працювати в команді над комерційними проєктами середньої та великої складності</li>
+          <li>Прокачувати софт-скіли, архітектурні рішення та оптимізацію</li>
+          <li>Розвивати навички в розробці багатокористувацьких механік</li>
+        </ul>
+      </div>
+
+      <div class="cv-actions">
+        <a href="#" class="cv-btn" onclick="printResume(); return false;">
+          🖨️ Друк резюме
+        </a>
+        <a href="https://github.com/HuGoxDP" target="_blank" class="cv-btn">
+          👀 Переглянути на GitHub
+        </a>
+        <a href="https://linkedin.com/in/oleksandr-maidanika-a43baa226" target="_blank" class="cv-btn">
+          🔗 LinkedIn профіль
+        </a>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+      <h2>📜 Сертифікати</h2>
+      
+      <div class="cert-note">
+        <h3>🏆 Сертифікати</h3>
+        <p style="margin-bottom:20px">Постійно навчаюся та розвиваю свої навички. Усі отримані сертифікати зберігаю в окремому репозиторії для легкого доступу та верифікації.</p>
+        <a href="https://github.com/HuGoxDP/certificates" target="_blank" class="cv-btn">
+          📜 Переглянути сертифікати
+        </a>
+      </div>
     </section>
 
     <footer>
-      Built with ❤️ — контакти: <a href="https://t.me/SpecWarrHuGo" style="color:var(--accent)" target="_blank">@SpecWarrHuGo</a>
+      <p>Створено з ❤️ для демонстрації навичок Unity-розробки</p>
+      <p>Контакти: <a href="mailto:sasha.maidanika@gmail.com">sasha.maidanika@gmail.com</a> | <a href="tel:+380959427254">+38 095 942-72-54</a> | <a href="https://t.me/SpecWarrHuGo" target="_blank">@SpecWarrHuGo</a></p>
     </footer>
   </div>
 
@@ -137,42 +406,19 @@
   <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-header">
-        <strong id="modalTitle">Відео</strong>
+        <strong id="modalTitle">Відео демонстрація</strong>
         <button class="close" id="closeBtn" aria-label="Close">✕</button>
       </div>
       <div class="modal-body">
         <div style="position:relative;padding-top:56.25%">
-          <iframe id="player" src="" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:8px" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          <iframe id="player" src="" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:12px" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    // open modal when clicking video buttons
-    document.querySelectorAll('button[data-video]').forEach(btn => {
-      btn.addEventListener('click', ()=>{
-        const url = btn.getAttribute('data-video');
-        const title = btn.closest('.card').querySelector('h3').innerText || 'Відео';
-        const modal = document.getElementById('modal');
-        const player = document.getElementById('player');
-        document.getElementById('modalTitle').innerText = title;
-        // set iframe src
-        player.src = url;
-        modal.classList.add('show');
-        modal.setAttribute('aria-hidden','false');
-      })
-    })
-    // close modal
-    document.getElementById('closeBtn').addEventListener('click', closeModal);
-    document.getElementById('modal').addEventListener('click', (e)=>{ if(e.target.id==='modal') closeModal(); })
-    function closeModal(){
-      const modal = document.getElementById('modal');
-      const player = document.getElementById('player');
-      player.src = '';
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden','true');
-    }
-  </script>
+  <!-- Підключення компонентів JavaScript -->
+  <script src="./js/main.js"></script>
+  <script src="./js/lightbox.js"></script>
 </body>
 </html>
