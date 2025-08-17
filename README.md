@@ -33,6 +33,8 @@ Unity-розробник з річним досвідом створення і�
 - Плавна анімація та фізика
 - Зручний інтерфейс користувача
 
+[![Дивитись відео](Flappybird/FlappyBird_Preview.png)](https://drive.google.com/file/d/1F19hfFRzlTsVgRiYGsZ8qJ0HV7tbWZFN/view)
+
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
   <img src="Flappybird/MainMenu.jpg" alt="Головне меню" width="240"/>
   <img src="Flappybird/Game.jpg" alt="Ігрова сцена" width="240"/>
@@ -54,6 +56,8 @@ Unity-розробник з річним досвідом створення і�
 - Детальний опис кожного досліду
 - 5 повноцінних симуляцій на тему "Сила тертя"
 - Можливість перегляду результатів експерименту
+
+[![Дивитись відео](PhysicsAR/PhysicsAR_Preview.png)](https://drive.google.com/file/d/1avF8vVrcTitwzo2amF1gc0EgaPCh1zpV/view)
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
   <img src="PhysicsAR/CameraScene.jpg" alt="Меню камери" width="400"/>
@@ -89,6 +93,8 @@ Unity-розробник з річним досвідом створення і�
 - Таймер, система життів, нарахування балів
 - Підтримка кількох мов інтерфейсу
 - Кастомний лоадер квіз-паків (JSON-пакети, що можна підключати/вимикати)
+
+[![Дивитись відео](Memzy/MemeQuize_Preview.png)](https://drive.google.com/file/d/1KnBaeUL5qJW0BzAMspCRy2TjimIuMT5t/view)
   
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
   <img src="Memzy/MainMenu.jpg" alt="Головне меню" width="400"/>
