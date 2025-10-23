@@ -7,7 +7,7 @@
   <meta name="description" content="Unity Developer з Одеси. 1+ рік досвіду, 3 завершених проєкти, досвід AR розробки. Шукаю роботу Junior/Middle Unity Developer.">
   <meta name="keywords" content="Unity Developer, Game Developer, C#, Unity Engine, AR Developer, Одеса, Ukraine, Portfolio">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css?v=2">
   <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
 <body>
@@ -192,9 +192,15 @@
           </article>
 
           <article class="project-card">
-            <div class="project-placeholder">🃏</div>
+            <img src="./Armaga/MainMenu.png" alt="Armaga" class="project-image" onclick="openLightbox('armaga', 0)"/>
+            <div class="project-gallery-small" id="armaga-gallery">
+              <img src="./Armaga/CardSelectionMenu.png" alt="Меню вибору карт" onclick="openLightbox('armaga', 1)">
+              <img src="./Armaga/CardHovered.png" alt="Карта при наведенні" onclick="openLightbox('armaga', 2)">
+              <img src="./Armaga/Game.png" alt="Гра" onclick="openLightbox('armaga', 4)">
+              <span class="more-indicator" onclick="showAllImages('armaga')">+3</span>
+            </div>
             <div class="project-info">
-              <h4>🃏 Armagi Card System</h4>
+              <h4>🃏 Armaga</h4>
               <p>Тестове завдання — система карт з механікою будівництва</p>
               <div class="project-highlights">
                 <span>Card System</span>
@@ -210,6 +216,62 @@
                 <button class="btn-sm" onclick="openVideoModal('https://drive.google.com/file/d/1m-cpOo9PUN5n90qUvazZlhRdRoDy4_gF/preview')">🎥 Відео</button>
                 <a href="https://github.com/HuGoxDP/Test_Armageddonica" target="_blank" class="btn-sm">💻 Код</a>
                 <a href="https://github.com/HuGoxDP/Test_Armageddonica/releases/tag/0.0.1b" target="_blank" class="btn-sm">📦 Білд</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="./GameRunner/MainMenu.png" alt="GameRunner" class="project-image" onclick="openLightbox('gamerunner', 0)"/>
+            <div class="project-gallery-small" id="gamerunner-gallery">
+              <img src="./GameRunner/level 1.png" alt="Рівень 1" onclick="openLightbox('gamerunner', 1)">
+              <img src="./GameRunner/level 2.png" alt="Рівень 2" onclick="openLightbox('gamerunner', 2)">
+              <img src="./GameRunner/levelComplete.png" alt="Завершення рівня" onclick="openLightbox('gamerunner', 3)">
+              <span class="more-indicator" onclick="showAllImages('gamerunner')">+2</span>
+            </div>
+            <div class="project-info">
+              <h4>🏃 GameRunner</h4>
+              <p>Платформер з механікою бігу та перешкодами</p>
+              <div class="project-highlights">
+                <span>Platformer</span>
+                <span>Level System</span>
+                <span>Character Control</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">Physics2D</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-sm" onclick="openVideoModal('https://drive.google.com/file/d/1cp5Jw4B79tT02klM0ThYwmMlqJRaTM0M/preview')">🎥 Відео</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="./SnakeTest/level2.png" alt="SnakeTest" class="project-image" onclick="openLightbox('snaketest', 0)"/>
+            <div class="project-gallery-small" id="snaketest-gallery">
+              <img src="./SnakeTest/level4.png" alt="Рівень 4" onclick="openLightbox('snaketest', 1)">
+              <img src="./SnakeTest/Level 6.png" alt="Рівень 6" onclick="openLightbox('snaketest', 2)">
+              <img src="./SnakeTest/Level8.png" alt="Рівень 8" onclick="openLightbox('snaketest', 3)">
+              <span class="more-indicator" onclick="showAllImages('snaketest')">+1</span>
+            </div>
+            <div class="project-info">
+              <h4>🐍 SnakeTest</h4>
+              <p>Тестове завдання — 3D пазл-гра зі змійками (клон Arrows)</p>
+              <div class="project-highlights">
+                <span>3D Puzzle</span>
+                <span>Level System</span>
+                <span>Mobile (Android)</span>
+              </div>
+              <div class="project-tech">
+                <span class="tech-item">Unity</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">3D Graphics</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-sm" onclick="openVideoModal('https://drive.google.com/file/d/1UdS2E3bYEyJZgXHYIMuHhQYEISm2g3IB/preview')">🎥 Відео</button>
+                <a href="https://github.com/HuGoxDP/SnakeTest_Work" target="_blank" class="btn-sm">💻 Код</a>
+                <a href="https://github.com/HuGoxDP/SnakeTest_Work/releases" target="_blank" class="btn-sm">📦 Білд</a>
               </div>
             </div>
           </article>

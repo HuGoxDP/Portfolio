@@ -40,6 +40,27 @@ class ProjectLightbox {
         { src: './Flappybird/Game.jpg', alt: 'Гра' },
         { src: './Flappybird/Gameplay.jpg', alt: 'Геймплей' },
         { src: './Flappybird/ScoreMenu.jpg', alt: 'Меню результатів' }
+      ],
+      'armaga': [
+        { src: './Armaga/MainMenu.png', alt: 'Armaga - Головне меню' },
+        { src: './Armaga/CardSelectionMenu.png', alt: 'Меню вибору карт' },
+        { src: './Armaga/CardHovered.png', alt: 'Карта при наведенні' },
+        { src: './Armaga/CardDragged.png', alt: 'Перетягування карти' },
+        { src: './Armaga/Game.png', alt: 'Гра' },
+        { src: './Armaga/Game2.png', alt: 'Геймплей' }
+      ],
+      'gamerunner': [
+        { src: './GameRunner/MainMenu.png', alt: 'GameRunner - Головне меню' },
+        { src: './GameRunner/level 1.png', alt: 'Рівень 1' },
+        { src: './GameRunner/level 2.png', alt: 'Рівень 2' },
+        { src: './GameRunner/levelComplete.png', alt: 'Завершення рівня' },
+        { src: './GameRunner/Credits.png', alt: 'Титри' }
+      ],
+      'snaketest': [
+        { src: './SnakeTest/level2.png', alt: 'SnakeTest - Рівень 2' },
+        { src: './SnakeTest/level4.png', alt: 'Рівень 4' },
+        { src: './SnakeTest/Level 6.png', alt: 'Рівень 6' },
+        { src: './SnakeTest/Level8.png', alt: 'Рівень 8' }
       ]
     };
     this.init();
